@@ -14,16 +14,18 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'nested-routes-playground' title`, () => {
+  it(`should have the 'nested-routes-example' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('nested-routes-playground');
+    expect(app.title).toEqual('nested-routes-example');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, nested-routes-playground');
+    expect(compiled.querySelector('h1')?.textContent).toContain(
+      'Hello, nested-routes-example'
+    );
   });
 });
